@@ -31,7 +31,12 @@ Expected Output:
 
 */ 
  
-let phoneReg = /write your regex here/
+let phoneReg = /[^0-9]+/g
+
+const phonNumber = '555-555-5555++++'
+
+const answer = phonNumber.replace(phoneReg, '')
+console.log(answer)
 
 /* 
 
@@ -51,7 +56,9 @@ Expected Output:
 
 */ 
 
-let emailReg = /write your regex here/
+let emailReg = /\w+@[a-zA-Z]+.[a-zA-Z]+/
+let emailArr = sampleApp.match(emailReg)
+console.log(emailArr)
 
 /* 
 
@@ -67,4 +74,6 @@ Expected Output:
 
 */ 
 
-let statusReg = /write your regex here/
+let statusReg = /status:/i 
+let statusIndex = sampleApp.search(statusReg)
+console.log(statusIndex)
